@@ -4,12 +4,14 @@ const mysql = require("mysql");
 require('dotenv').config();
 const ejs = require("ejs");
 const cookieSession = require("cookie-session");
+const authRoutes = require('./routes/authRoutes');
 app.set("view engine", 'ejs')
+
+app.use('/auth', authRoutes);
 
 app.get('/', (req, res) => {
     res.render("index");
 });
-
 
 
 
