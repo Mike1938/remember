@@ -1,6 +1,7 @@
 const express = require("express");
+const passportSetUp = require('./config/passportSetup');
 const app = express();
-const mysql = require("mysql");
+const mysql = require("mysql2");
 require('dotenv').config();
 const ejs = require("ejs");
 const cookieSession = require("cookie-session");
