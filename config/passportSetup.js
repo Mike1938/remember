@@ -8,22 +8,34 @@ const connection = mysql.createConnection({
     password: process.env.password,
     database: process.env.database
 });
+passport.serializeUser((user, done) => {
+    done(null, user);
+});
+
+passport.deserializeUser((id, done) => {
+    connection.query("SELECT * FROM users WHERE userID = ?", [id], (err, results) => {
+        done(null, results);
+    });
+});
 
 passport.use(new GoogleStrategy({
     clientID: process.env.googleKey,
     clientSecret: process.env.secretKey,
     callbackURL: "/auth/google/redirect"
 }, (accessToken, refreshToken, profile, done) => {
-    connection.query("SELECT * FROM users WHERE userID = ?", [profile.id], (err, results) => {
+    connection.query("SELECT * FROM users WHERE userAuthID = ?", [profile.id], (err, results) => {
         if (results.length === 0) {
-            const queryStr = `INSERT INTO users (userID, username, authType)  VALUES (?, ?, ?)`
+            const queryStr = `INSERT INTO users (userAuthID, username, authType)  VALUES (?, ?, ?)`
             connection.query(queryStr, [profile.id, profile.displayName, profile.provider],
                 (error, results) => {
                     if (error) throw error;
-                    console.log(results);
-                })
+                    connection.query("SELECT LAST_INSERT_ID() AS LastId", (err, results) => {
+                        done(null, results[0].LastId);
+                    })
+                });
         } else {
             console.log(`Welcome ${results[0].username}`)
+            done(null, results[0].userID);
         }
     });
 }));
