@@ -8,7 +8,7 @@ const cookieSession = require("cookie-session");
 const authRoutes = require('./routes/authRoutes');
 const passport = require('passport');
 app.set("view engine", 'ejs')
-
+app.use(express.static('public'))
 app.use('/auth', authRoutes);
 
 app.use(cookieSession({
@@ -24,6 +24,13 @@ app.use(passport.session());
 app.get('/', (req, res) => {
     res.render("index");
 });
+
+
+app.get("/todo", (req, res) => {
+    console.log(req)
+    res.render("todoHub")
+
+})
 
 
 
