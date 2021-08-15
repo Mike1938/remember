@@ -1,12 +1,12 @@
-body{
-    background-color: #ffffff;
+body, html{
+    background-color: #ffff;
     margin: 0;
     font-family: 'Poppins', sans-serif;
     height: 100%;
 }
 nav{
     height: 50px;
-    background-color: #a05454;
+    background-color: #ebb237;
 }
 nav ul{
     list-style: none;
@@ -16,37 +16,88 @@ nav ul{
     text-align: center;
 }
 nav li{
-    display: inline-block;
-    padding: 10px;
+    float: left;
     font-size: 1.2rem;
+    padding-left: 40px;
+}
+nav a{
+    color: #ffff;
+    text-decoration: none;
+    display: block;
+    height: 50px;
+    line-height: 50px;
+}
+nav a:hover li{
+    background-color: #DB5A42;
 }
 
 
 #homeHeader{
-    display: grid;
-    grid-template-columns: 40% 60%;
-    background-color: #E8AE68;
+    background-image: url("../images/magicpattern-gradient-1629001560557.jpg");
     justify-items: center;
     align-items: center;
-    height: 100%;
+    height: 40%;
+    clip-path: ellipse(2299px 378px at 50% -4.23%);
 }
 #homeHeader div{
     height: 100%;
     width: 100%;
 }
-#headerImg{
-    background-color: #DB5A42;
-    width: 100%;
-    clip-path: polygon(100.11% -17px, 100.09% 100.42%, -0.03% 100%, 250px -0.53%);
-}
+
 #homeHeader h1{
-    text-align: center;
-    font-size: 4.5rem;
+    font-size: 5.5rem;
     font-weight: 300;
-    color: #ffff;
+    margin: 0;
+    padding-top: 30px;
 }
-#homeHeader img{
-    display: block;
+#headerTitle{
+    text-align: center;
+}
+#headerTitle p{
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+#headerTitle button{
+    font-size: 1.2rem;
+    border: none;
+    height: 50px;
+    width: 150px;
+    border-radius: 8px;
+}
+#headerTitle button:hover{
+    cursor: pointer;
+    transition: all 300ms;
+    background-color: #DB5A42;
+}
+#aboutApp{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 300;
+}
+#aboutApp h1{
+    margin-top: 0;
+}
+#demo{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+#shopping{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr)
+}
+#shopping div{
+    width: 55%;
     margin: 0 auto;
-    width: 350px;
+    border-radius: 15px;
+    padding: 5px;
+}
+#shopList{
+    background-color: rgb(236, 199, 32) ;
+}
+#todays{
+    background-color: #f18787;
+}
+#shopping ul{
+    padding-left: 0;
+    list-style: none;
 }
