@@ -55,6 +55,8 @@ nav a:hover{
     height: 500px;
     left: 35%;
     top: 20%;
+    margin-left: -30px;
+    margin-top: -20px;
 }
 .yCircle{
     position: absolute;
@@ -64,6 +66,8 @@ nav a:hover{
     height: 612px;
     right: 35%;
     bottom: 30%;
+    margin-bottom: -150px;
+    margin-right: -150px;
 }
 
 #headerTitle{
@@ -94,37 +98,89 @@ nav a:hover{
     background-color: #eeaba0;
 }
 #aboutApp{
-    text-align: center;
-    padding: 150px;
-    font-size: 2rem;
-    font-weight: 300;
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
 }
-
-#demo{
+#aboutTitle{
+    font-size: 4.5rem;
+    z-index: 1;
+}
+#aboutInfo{
+    font-size: 2.5rem;
+    text-align: center;
+    z-index: 1;
+}
+.pCircle2{
+    position: absolute;
+    background-color: #FFB1B1;
+    opacity: 0.5;
+    width: 500px;
+    height: 500px;
+    left: 35%;
+    top: 10%;
+    margin-left: -30px;
+    margin-top: -10px;
+}
+.yCircle2{
+    position: absolute;
+    background-color: #FFE03C;
+    opacity: 0.5;
+    width: 612px;
+    height: 612px;
+    right: 35%;
+    bottom: 45%;
+    margin-bottom: -160px;
+    margin-right: -150px;
+}
+#notes{
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
-#demo h1{
-    margin: 100px;
-    font-size: 5rem;
-    margin-top: 0;
-    text-decoration: underline #ffb7ab;
-    padding-top: 40px;
-    color: #ffff;
+#cardCont{
+    position: relative;
 }
-#demo p{
-    color: #ffff;
-    width: 70%;
+#notes h1{
+    grid-column: 1/3;
+    justify-self: center;
+    font-size: 4rem;
+}
+#notes img{
     justify-self: center;
 }
-#shopping{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr)
+.cards{
+    width: 300px;
+    height: 350px;
+    border-radius: 15px;
 }
-#todays{
-    background-color: #ffffff;
+.cards p{
+    padding-left: 10px;
 }
-#shopping ul{
-    padding-left: 0;
-    list-style: none;
+.notes1{
+    position: absolute;
+    background-color: #FFB1B1;
+    top: 2%;
+    right: 50%;
+    margin-right: -150px;
+}
+
+.notes2{
+    position: absolute;
+    background-color: #f6de63;
+    right: 50%;
+    bottom: 50%;
+    margin-right: -150px;
+}
+
+.notes3{
+    position: absolute;
+    background-color: #FFB1B1;
+    bottom: 30%;
+    right: 50%;
+    margin-right: -150px;
 }
