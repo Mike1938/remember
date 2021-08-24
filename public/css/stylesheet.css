@@ -34,46 +34,24 @@ nav a{
 nav a:hover{
     background-color: #ffffff;
 }
-.circles{
-    border-radius: 50%;
-}
+
 
 #homeHeader{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-    height: 100%;
     background: rgb(255,231,106);
     background: linear-gradient(96deg, rgba(255,231,106,1) 0%, rgba(255,177,177,1) 100%);
 }
-.pCircle{
-    position: absolute;
-    background-color: #FFB1B1;
-    opacity: 0.4;
-    width: 500px;
-    height: 500px;
-    left: 35%;
-    top: 20%;
-    margin-left: -30px;
-    margin-top: -20px;
-}
-.yCircle{
-    position: absolute;
-    background-color: #FFE03C;
-    opacity: 0.4;
-    width: 612px;
-    height: 612px;
-    right: 35%;
-    bottom: 30%;
-    margin-bottom: -150px;
-    margin-right: -150px;
-}
 
 #headerTitle{
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
-    align-self: center;
-    z-index: 1;
+    height: 100vh;
+    background-image: url(../images/bgLandingPageCircle.svg);
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
 }
 #headerTitle h1{
     font-size: 5.5rem;
@@ -99,44 +77,23 @@ nav a:hover{
 }
 #aboutApp{
     display: flex;
-    position: relative;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
     height: 100%;
     width: 100%;
+    background-image: url(../images/titlegradientColor.svg);
+    background-repeat: no-repeat;
 }
 #aboutTitle{
     font-size: 4.5rem;
-    z-index: 1;
 }
 #aboutInfo{
     font-size: 2.5rem;
     text-align: center;
     z-index: 1;
 }
-.pCircle2{
-    position: absolute;
-    background-color: #FFB1B1;
-    opacity: 0.5;
-    width: 500px;
-    height: 500px;
-    left: 35%;
-    top: 10%;
-    margin-left: -30px;
-    margin-top: -10px;
-}
-.yCircle2{
-    position: absolute;
-    background-color: #FFE03C;
-    opacity: 0.5;
-    width: 612px;
-    height: 612px;
-    right: 35%;
-    bottom: 45%;
-    margin-bottom: -160px;
-    margin-right: -150px;
-}
+
 #notes{
     height: 100%;
     display: grid;
