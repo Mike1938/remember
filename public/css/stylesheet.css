@@ -38,11 +38,10 @@ nav a:hover{
 
 #homeHeader{
     background: rgb(255,231,106);
-    background: linear-gradient(96deg, rgba(255,231,106,1) 0%, rgba(255,177,177,1) 100%);
+    background: linear-gradient(96deg, rgba(255,231,106,1) 0%, rgba(255,177,177,1) 70%);
 }
 
 #headerTitle{
-    padding-top: 10vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50,11 +49,11 @@ nav a:hover{
     height: 100vh;
     background-image: url(../images/bgLandingPageCircle.svg);
     background-position: center;
-    background-size: 50%;
+    background-size: 53%;
     background-repeat: no-repeat;
 }
 #headerTitle h1{
-    font-size: 5.5rem;
+    font-size: 6vw;
     font-weight: 300;
     margin: 0;
 }
@@ -77,27 +76,34 @@ nav a:hover{
 }
 #aboutApp{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
     height: 100%;
-    width: 100%;
     background-image: url(../images/titlegradientColor.svg);
     background-repeat: no-repeat;
+    background-size: 100% ;
 }
 #aboutTitle{
-    font-size: 4.5rem;
+    font-size: 3vw;
+    padding: 20px;
+    margin-top: 0;
 }
 #aboutInfo{
-    font-size: 2.5rem;
+    font-size: 2.5vw;
     text-align: center;
-    z-index: 1;
+    margin-top: 0;
 }
 
 #notes{
     height: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    background-image: url(../images/bottomgradientColor.svg);
+    background-color: #FFF3CA;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100%;
 }
 #cardCont{
     position: relative;
