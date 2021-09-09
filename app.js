@@ -1,5 +1,5 @@
 const express = require("express");
-const passportSetUp = require('./config/passportSetup');
+// const passportSetUp = require('./config/passportSetup');
 const app = express();
 const mysql = require("mysql2");
 require('dotenv').config();
